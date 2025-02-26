@@ -1,0 +1,13 @@
+[build]
+  command = "npm install --prefix client && npm run build --prefix client"
+  publish = "client/build"
+  base = "client"
+
+[context.production.environment]
+  NODE_VERSION = "18"
+  REACT_APP_API_URL = "https://your-api-url.com"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
