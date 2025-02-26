@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainImg.css";
-import Carousel from "react-bootstrap/Carousel";
+import { Carousel } from "react-bootstrap";
 import ExampleCarouselImage from "./ExampleCarouselImage";
 
 const MainImg = () => {
