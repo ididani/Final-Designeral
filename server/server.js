@@ -52,12 +52,13 @@ app.use("/api/search", searchRoute);
 app.use("/api/user", userRoute);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "client/build")));
+  app.use(express.static(path.join(__dirname, "../client/build")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
   });
 }
+
 
 app.get("/message", (req, res) => {
   res.send("<h1>Hello Node!</h1>");
@@ -65,13 +66,6 @@ app.get("/message", (req, res) => {
 
 app.use((req, res, next) => {
   res.status(404).json({ message: "Route not found" });
-});
-
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res
-    .status(500)
-    .json({ message: "Internal server error", error: err.message });
 });
 
 app.use((err, req, res, next) => {
