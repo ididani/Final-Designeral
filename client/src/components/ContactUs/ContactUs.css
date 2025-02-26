@@ -1,0 +1,85 @@
+.contact-page {
+  background-color: #f8f9fa;
+}
+
+.contact-form-container {
+  background-color: #ffffff;
+  padding: 40px 0;
+}
+
+.success-message-contact {
+  color: #28a745;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-us-form {
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+}
+
+label {
+  margin: 10px 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  margin: 0 !important;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #4a4a4a;
+  outline: none;
+}
+
+.submit-message {
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-message:hover {
+  background-color: #333333;
+}
+
+.container-contact h1,
+.container-contact p,
+label {
+  color: #333333;
+}
+
+.status-message {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.terms-container {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.terms-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.terms-container label {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}

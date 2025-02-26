@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"path": "../../../../../portfolio-website"
+		}
+	],
+	"settings": {
+		"java.format.settings.url": "programming/.vscode/java-formatter.xml",
+		"java.project.sourcePaths": [
+			"Lab07",
+			"Homework 3"
+		],
+		"liveServer.settings.multiRootWorkspaceName": "portfolio-website"
+	}
+}

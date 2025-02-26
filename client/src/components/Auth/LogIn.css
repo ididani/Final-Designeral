@@ -1,0 +1,86 @@
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.login-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+.login-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.login-form-label {
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.login-form-control {
+    width: 100%;
+    padding: 12px !important;
+    border: 1px solid #000000;
+    border-radius: 0 !important;
+    transition: border-color 0.15s ease-in-out;
+}
+
+.login-form-control:focus {
+    border-color: #ef233c !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.login-submit-btn {
+    width: 100%;
+    padding: 10px !important;
+    background-color: #000000;
+    border: none !important;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 0 !important;
+    text-transform: uppercase;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.login-submit-btn:hover {
+    background-color: #ef233c !important;
+}
+
+.login-register-link {
+    margin-top: 1rem;
+    text-align: center;
+    color: #000000;
+}
+
+.login-register-link a {
+    color: #c1121f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register-link a:hover {
+    text-decoration: underline;
+}
+
+.login-alert {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: #1a5156;
+}

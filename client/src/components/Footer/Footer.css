@@ -1,0 +1,155 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to right, #1a1a1a, #2c2c2c);
+    color: #fff !important;
+  padding: 40px 20px;
+  box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-section h3 {
+  color: #f7b267;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 14px;
+  line-height: 1.8;
+  color: white;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.subscription-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  padding: 5px;
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+.subscription-input {
+  width: 80% !important;
+  border: none;
+  border-radius: 50px;
+  margin: 0 !important;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  color: #999;
+  outline: none;
+}
+
+.subscription-input::placeholder {
+  color: #b3b3b3;
+}
+
+.subscription-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  padding: 13px;
+  cursor: pointer;
+  width: 30%;
+}
+
+.subscription-title {
+  color: #f7b267;
+  margin: 15px 0;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.subscription-button:hover {
+  background-color: #000;
+}
+
+.subscription-container:focus-within {
+  border-color: #999;
+}
+
+.locations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.locations ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.instagram-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.instagram-images img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.success-msg {
+  color: green !important;
+  margin-top: 10px;
+}
+
+.error-msg {
+  color: #bf0603 !important;
+  margin-top: 10px;
+}
+
+.subscription-button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+@media (max-width: 1200px) {
+  .subscription-button {
+    width: 40%;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  .subscription-button {
+    width: 20%;
+  }
+}
+
+@media (max-width: 500px) {
+  .subscription-button {
+    width: 40%;
+  }
+
+  .instagram-images img {
+    width: 100px;
+    height: 100px;
+  }
+}

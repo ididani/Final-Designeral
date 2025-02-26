@@ -1,0 +1,50 @@
+.align-items-stretch {
+  width: 100%;
+  margin: auto;
+}
+
+.image-grid {
+  margin: 30px 0;
+}
+
+.left-image {
+  width: 50%;
+}
+.left-image img {
+  height: 600px;
+  object-fit: cover;
+  padding: 10px;
+}
+
+.right-image {
+  width: 50%;
+  display: flex;
+}
+
+.top-image {
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.top-image img {
+  height: 250px;
+  object-fit: cover;
+  padding: 10px;
+  width: 100%;
+}
+
+.bottom-image {
+  flex-wrap: wrap;
+}
+
+.bottom-image img {
+  height: 330px;
+  object-fit: cover;
+  padding: 10px;
+}
+
+img:hover {
+  transform: scale(1.02);
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
