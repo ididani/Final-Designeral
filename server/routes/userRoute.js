@@ -5,7 +5,7 @@ const secret = "asdfe45we45w345wegw345werjktjwertkjfdgfgfsgf";
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 const userModel = require("../models/userModel");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const salt = bcrypt.genSaltSync(10);
 
 app.post("/register", async (req, res) => {
