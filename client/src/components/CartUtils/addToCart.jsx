@@ -14,7 +14,7 @@ export const addToCart = async (productId, quantity) => {
             return null;
         }
 
-        const response = await axios.post(`http://localhost:5000/api/cart/${userInfo.id}/add`, {
+        const response = await axios.post(`https://designeral.onrender.com/api/cart/${userInfo.id}/add`, {
             productId,
             quantity
         }, { withCredentials: true });

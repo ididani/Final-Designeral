@@ -25,7 +25,7 @@ const LogIn = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/user/login",
+        "https://designeral.onrender.com/api/user/login",
         { email, password }
       );
 

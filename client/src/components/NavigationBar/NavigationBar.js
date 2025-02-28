@@ -23,7 +23,7 @@ const NavigationBar = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        let endpoint = "http://localhost:5000/api/products";
+        let endpoint = "https://designeral.onrender.com/api/products";
         if (category) endpoint += `/${category}`;
         if (subCategory) endpoint += `/${subCategory}`;
 
@@ -77,7 +77,7 @@ const NavigationBar = () => {
       try {
         const userInfo = getUserInfo();
 
-        const response = await axios.get(`http://localhost:5000/api/cart/${userInfo.id}`, {
+        const response = await axios.get(`https://designeral.onrender.com/api/cart/${userInfo.id}`, {
           withCredentials: true,
         });
         const cartItems = response.data.items;
@@ -96,7 +96,7 @@ const NavigationBar = () => {
     if (query.length > 2) {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/search?q=${query}`
+          `https://designeral.onrender.com/api/search?q=${query}`
         );
         setSearchResults(response.data);
         setIsSearchResultsVisible(true);

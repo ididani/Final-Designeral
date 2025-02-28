@@ -36,7 +36,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        let endpoint = "http://localhost:5000/api/products";
+        let endpoint = "https://designeral.onrender.com/api/products";
         if (category && subCategory) {
           endpoint += `/${category}/${subCategory}`;
         } else if (category) {

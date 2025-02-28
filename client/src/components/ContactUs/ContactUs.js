@@ -17,7 +17,7 @@ function ContactUs() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/contacts", newContact)
+      .post("https://designeral.onrender.com/api/contacts", newContact)
       .then((res) => {
         console.log("Message sent");
         setSms("Message sent! Thank you for contacting us.");

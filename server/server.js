@@ -13,10 +13,12 @@ const subscriptionRoute = require("./routes/subscriptionRoute");
 const brandRoute = require("./routes/brandRoute");
 const searchRoute = require("./routes/searchRoute");
 const userRoute = require("./routes/userRoute");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
-
+const PORT = process.env.PORT || 8081;
 app.use(
   cors({
     origin: "https://designeral.netlify.app",
@@ -46,6 +48,7 @@ mongoose
     process.exit(1);
   });
 
+console.log("MONGODB_URI:", process.env.MONGODB_URI);
 app.use("/api/contacts", contactRoute);
 app.use("/api/products", productRoute);
 app.use("/api/cart", cartRoute);
@@ -54,18 +57,6 @@ app.use("/api/subscriptions", subscriptionRoute);
 app.use("/api/brands", brandRoute);
 app.use("/api/search", searchRoute);
 app.use("/api/user", userRoute);
-
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static(path.join(__dirname, "../client/build")));
-
-//   app.get("/", (req, res) => {
-//     res.send("Backend is running! Go to /api/... for API routes.");
-//   });
-
-//   app.get("*", (req, res) => {
-//     res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
-//   });
-// }
 
 app.get("/message", (req, res) => {
   res.send("<h1>Hello Node!</h1>");

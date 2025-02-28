@@ -42,7 +42,7 @@ const Register = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/api/user/register/', newUser)
+            const response = await axios.post('https://designeral.onrender.com/api/user/register/', newUser)
             console.log("Registration response:", response.data)
             setAlert('success')
             setError("Registration successful! Redirecting to login...")

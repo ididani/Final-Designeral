@@ -45,7 +45,7 @@ const OneProduct = () => {
   useEffect(() => {
     if (product && product.brand) {
       axios
-        .get("http://localhost:5000/api/products/suggestions", {
+        .get("https://designeral.onrender.com/api/products/suggestions", {
           params: {
             brand: product.brand,
             currentProductId: product._id // Add this line

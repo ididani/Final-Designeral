@@ -20,7 +20,7 @@ const Cards = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5000/api/products")
+      .get("https://designeral.onrender.com/api/products")
       .then((response) => {
         if (
           response.data &&

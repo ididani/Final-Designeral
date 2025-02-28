@@ -36,7 +36,7 @@ router.post("/checkout", async (req, res) => {
     });
 
     await newOrder.save();
-    await axios.delete(`http://localhost:5000/api/cart/${userId}/clear`);
+    await axios.delete(`https://designeral.onrender.com/api/cart/${userId}/clear`);
 
     res.json({ orderId: newOrder._id });
   } catch (error) {

@@ -20,7 +20,7 @@ const Footer = () => {
 
     setIsLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/subscriptions", { email });
+      await axios.post("https://designeral.onrender.com/api/subscriptions", { email });
       setMessage("Subscribed successfully!");
       setEmail("");
     } catch (error) {

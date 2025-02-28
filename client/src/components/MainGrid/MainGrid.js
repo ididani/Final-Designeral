@@ -11,7 +11,7 @@ const MainGrid = () => {
   useEffect(() => {
     const fetchBrands = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/brands");
+        const response = await axios.get("https://designeral.onrender.com/api/brands");
         setBrands(response.data);
       } catch (err) {
         setError("Failed to load brands");

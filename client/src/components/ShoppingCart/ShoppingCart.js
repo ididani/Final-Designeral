@@ -35,7 +35,7 @@ const ShoppingCart = () => {
 
       console.log("Fetching cart for user ID:", userInfo.id);
       const response = await axios.get(
-        `http://localhost:5000/api/cart/${userInfo.id}`
+        `https://designeral.onrender.com/api/cart/${userInfo.id}`
       );
       const cartData = response.data;
       console.log("Cart data:", cartData);
@@ -59,7 +59,7 @@ const ShoppingCart = () => {
       const userInfo = getUserInfo();
       if (!userInfo) return;
       await axios.delete(
-        `http://localhost:5000/api/cart/${userInfo.id}/item/${productId}/delete`
+        `https://designeral.onrender.com/api/cart/${userInfo.id}/item/${productId}/delete`
       );
       fetchCartItems();
     } catch (err) {
@@ -79,7 +79,7 @@ const ShoppingCart = () => {
       }
 
       await axios.put(
-        `http://localhost:5000/api/cart/${userInfo.id}/item/${productId}/update`,
+        `https://designeral.onrender.com/api/cart/${userInfo.id}/item/${productId}/update`,
         { quantity }
       );
       fetchCartItems();
@@ -95,7 +95,7 @@ const ShoppingCart = () => {
     try {
       const userInfo = getUserInfo();
       if (!userInfo) return;
-      await axios.delete(`http://localhost:5000/api/cart/${userInfo.id}/clear`);
+      await axios.delete(`https://designeral.onrender.com/api/cart/${userInfo.id}/clear`);
       setCartItems([]);
       return (
         <div>

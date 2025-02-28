@@ -30,7 +30,7 @@ const NewProduct = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/products/add', product);
+            const response = await axios.post('https://designeral.onrender.com/api/products/add', product);
             console.log('Product added:', response.data);
             alert('Product added successfully!');
             setProduct({
