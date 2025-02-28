@@ -29,8 +29,6 @@ app.use(
 app.use(express.json({ limit: "1000mb", extended: true }));
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
-SESSION_SECRET = "your_secure_secret";
-
 app.use(
   session({
     secret: process.env.SESSION_SECRET || "fallbackSecret",
@@ -39,9 +37,6 @@ app.use(
     cookie: { maxAge: 1000 * 60 * 60 * 24 }, // 1 day
   })
 );
-
-MONGODB_URI =
-  "mongodb+srv://your_username:your_password@cluster.mongodb.net/your_db?retryWrites=true&w=majority";
 
 mongoose
   .connect(process.env.MONGODB_URI)
